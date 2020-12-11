@@ -1,12 +1,10 @@
  
-   <PackageReference Include="Microsoft.SqlServer.ConnectionInfo.dll" Version="1.0.1" />
-    <PackageReference Include="Microsoft.SqlServer.Management.Sdk.Sfc.dll" Version="1.0.1" />
-    <PackageReference Include="Microsoft.SqlServer.Smo.dll" Version="1.0.1" />
-    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.44091.28" />
+
     
  var server = new Server(@".");
             var databse = server.Databases["InfinityMatrix.Niraiya"];
             string path = @"C:\Work\DB\" + databse.Name + @"\";
+
 
             var scripter = new Scripter(server);
             scripter.Options.ScriptDrops = false;
@@ -130,3 +128,9 @@
             }
 
             Console.ReadLine();
+            
+            
+               <PackageReference Include="Microsoft.SqlServer.ConnectionInfo.dll" Version="1.0.1" />
+    <PackageReference Include="Microsoft.SqlServer.Management.Sdk.Sfc.dll" Version="1.0.1" />
+    <PackageReference Include="Microsoft.SqlServer.Smo.dll" Version="1.0.1" />
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.44091.28" />
